@@ -4,7 +4,6 @@ decimal_to_binary() {
     local decimal=$1
     local binary=$(echo "obase=2; $decimal" | bc)
     
-    # Дополняем нулями слева до 8 символов
     while [ ${#binary} -lt 8 ]; do
         binary="0$binary"
     done
